@@ -1,0 +1,16 @@
+<?xml version = "1.0" encoding = "utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+"-//Hibernate/Hibernate Mapping DTD//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping  package="com.hilo.entity">
+<class name="Robot" table="robot1">
+<id name="robotNo" column="robot_no" type="string">
+<!-- <generator class="hilo">
+<param name="max_lo">3</param> -->
+<generator class="com.hilo.custom.generator.CustomRobotIdGenerator">
+</generator>
+</id>
+<property name="robotName" column="robot_name" type="string"/>
+<property name="robotType" column="robot_type" type="string"/>
+</class>
+</hibernate-mapping>
